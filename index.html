@@ -1,753 +1,155 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>0.01% chance</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.01% — A Story About Her</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div id="progress"></div>
 
 <section class="cover" id="cover">
-
     <div class="cover-content">
-
-        <div class="kicker">
-            A story about a coincidence
-        </div>
-
+        <div class="kicker">A story about a coincidence & regret</div>
         <h1>0.01%</h1>
-
         <div class="subtitle">
-            The story of a meeting
-            <br>
+            The story of a meeting<br>
             that almost never happened.
         </div>
 
-        <button class="read" onclick="openBook()">
-            OPEN THE STORY
-        </button>
+        <button class="read" onclick="openBook()">OPEN THE STORY</button>
 
-        <div class="author">
-            A story by Yori
+        <div class="social-links">
+            <a href="https://facebook.com/kntolnamek" target="_blank" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/dyoriiii_" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://github.com/yori-funidare" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
         </div>
-
     </div>
-
 </section>
-
 
 <main class="book" id="book">
-
-<nav class="nav">
-
-    <button onclick="backToCover()">
-        0.01%
-    </button>
-
-    <button onclick="openContents()">
-        ☰ CONTENTS
-    </button>
-
-</nav>
-
-
-<section class="chapter fade" id="prolog">
-
-    <div class="chapter-number">
-        PROLOG
-    </div>
-
-    <h2>0.01%</h2>
-
-    <div class="chapter-subtitle">
-        The Impossible Chance
-    </div>
-
-    <div class="divider"></div>
-
-</section>
-
-
-<article class="story">
-
-    <p class="drop fade">
-        Aku bisa mengatakan bahwa bertemu dengannya
-        hanya memiliki kemungkinan sebesar 0.01%.
-    </p>
-
-    <p class="fade">
-        Dari begitu banyak manusia di dunia,
-        dari begitu banyak tempat yang bisa
-        kudatangi, sekolah yang bisa kupilih,
-        orang-orang yang mungkin bisa kukenal,
-        ada terlalu banyak kemungkinan yang
-        seharusnya membuat kami tidak pernah
-        bertemu.
-    </p>
-
-    <p class="fade">
-        Tapi pada akhirnya, aku tetap bertemu
-        dengannya.
-    </p>
-
-    <div class="emphasis fade">
-
-        Dan aku masih tidak tahu...
-
-        <br>
-
-        apakah itu sebuah keberuntungan
-
-        <br>
-
-        atau sebuah kesialan.
-
-    </div>
-
-    <p class="fade">
-
-        Di satu sisi, aku merasa sangat beruntung.
-
-        Aku bertemu dengan seorang wanita yang
-        sangat baik. Seseorang yang menyayangiku
-        dan menjadi begitu berarti dalam hidupku.
-
-    </p>
-
-    <p class="fade">
-
-        Walaupun pada akhirnya...
-
-        aku belum sempat untuk memilikinya.
-
-    </p>
-
-    <p class="fade">
-
-        Tapi di sisi lain, mungkin aku juga
-        adalah orang yang paling sial.
-
-    </p>
-
-    <p class="fade">
-
-        Karena aku seperti terjebak olehnya.
-
-        Perasaan itu tidak pergi begitu saja.
-        Bahkan setelah bertahun-tahun berlalu,
-        aku masih belum ingin membuka hati
-        untuk siapa pun.
-
-    </p>
-
-    <p class="fade">
-        Dan semuanya sudah berjalan selama...
-    </p>
-
-    <div class="big-number fade">
-        9 TAHUN
-    </div>
-
-</article>
-
-
-<section class="chapter fade" id="chapter1">
-
-    <div class="chapter-number">
-        CHAPTER 01
-    </div>
-
-    <h2>
-        Before I Knew Her
-    </h2>
-
-    <div class="chapter-subtitle">
-        The first connection
-    </div>
-
-    <div class="divider"></div>
-
-</section>
-
-
-<article class="story">
-
-    <p class="drop fade">
-
-        Kalau ada yang bertanya bagaimana
-        semua ini bisa terjadi, jawabannya
-        sebenarnya cukup sederhana.
-
-    </p>
-
-    <p class="fade">
-        Aku tidak mengenalnya secara langsung.
-    </p>
-
-    <p class="fade">
-        Aku lebih dulu mengenal kakaknya.
-    </p>
-
-    <p class="fade">
-
-        Kami sepantaran dan berada di
-        angkatan yang sama.
-
-        Kami bahkan bersekolah di SMP
-        yang sama.
-
-    </p>
-
-    <p class="fade">
-
-        Dan mungkin, tanpa kusadari saat itu,
-        keputusan untuk masuk ke sekolah
-        tersebut adalah salah satu titik
-        pertama yang membawa cerita ini
-        menuju kepadanya.
-
-    </p>
-
-    <div class="note fade">
-
-        Kalau aku masuk ke sekolah yang berbeda,
-        kemungkinan besar aku tidak akan pernah
-        mengenal kakaknya.
-
-        <br><br>
-
-        Dan kalau aku tidak mengenal kakaknya,
-        bagaimana mungkin aku bisa mengenal
-        adiknya?
-
-    </div>
-
-</article>
-
-
-<section class="chapter fade" id="chapter2">
-
-    <div class="chapter-number">
-        CHAPTER 02
-    </div>
-
-    <h2>
-        One Class
-    </h2>
-
-    <div class="chapter-subtitle">
-        Another coincidence
-    </div>
-
-    <div class="divider"></div>
-
-</section>
-
-
-<article class="story">
-
-    <p class="drop fade">
-        Tapi ceritanya belum selesai.
-    </p>
-
-    <p class="fade">
-
-        Kebetulan berikutnya adalah aku
-        berada di kelas yang sama dengan
-        kakaknya.
-
-    </p>
-
-    <p class="fade">
-
-        Kalau dipikir-pikir, aku bahkan
-        mungkin tidak akan mengenal
-        kakaknya dengan dekat kalau kami
-        tidak berada di kelas yang sama.
-
-    </p>
-
-    <p class="fade">
-
-        Jadi satu keputusan membawa
-        kepada keputusan lainnya.
-
-        Satu kebetulan membuka jalan
-        menuju kebetulan berikutnya.
-
-    </p>
-
-    <div class="emphasis fade">
-
-        Tapi saat itu,
-
-        <br>
-
-        aku masih belum tahu
-
-        <br>
-
-        bahwa semua jalan tersebut
-
-        <br>
-
-        sedang membawaku kepadanya.
-
-    </div>
-
-</article>
-
-
-<section class="chapter fade" id="chapter3">
-
-    <div class="chapter-number">
-        CHAPTER 03
-    </div>
-
-    <h2>
-        The Group
-    </h2>
-
-    <div class="chapter-subtitle">
-        The decision that mattered
-    </div>
-
-    <div class="divider"></div>
-
-</section>
-
-
-<article class="story">
-
-    <p class="drop fade">
-
-        Suatu hari, seorang guru memberikan
-        kami sebuah tugas.
-
-    </p>
-
-    <p class="fade">
-        Kami harus mengerjakannya secara
-        berkelompok.
-    </p>
-
-    <p class="fade">
-
-        Dan entah bagaimana, dari semua
-        kemungkinan kelompok yang bisa
-        terbentuk, aku dimasukkan ke dalam...
-
-    </p>
-
-    <div class="big-number fade">
-        GROUP 2
-    </div>
-
-    <p class="fade">
-
-        Di dalamnya ada aku, kakaknya,
-        dan beberapa teman lainnya.
-
-    </p>
-
-    <p class="fade">
-
-        Mungkin kelihatannya seperti hal
-        yang sangat biasa.
-
-        Hanya pembagian kelompok untuk
-        sebuah tugas sekolah.
-
-    </p>
-
-    <p class="fade">
-
-        Tapi sekarang kalau aku melihatnya
-        kembali, keputusan kecil itu adalah
-        salah satu bagian terpenting dari
-        seluruh cerita ini.
-
-    </p>
-
-    <p class="fade">
-
-        Karena kalau aku tidak berada
-        dalam kelompok itu...
-
-        mungkin aku tidak akan pernah
-        datang ke rumahnya.
-
-    </p>
-
-</article>
-
-
-<section class="chapter fade" id="chapter4">
-
-    <div class="chapter-number">
-        CHAPTER 04
-    </div>
-
-    <h2>
-        The House
-    </h2>
-
-    <div class="chapter-subtitle">
-        Where I still knew nothing
-    </div>
-
-    <div class="divider"></div>
-
-</section>
-
-
-<article class="story">
-
-    <p class="drop fade">
-
-        Untuk mengerjakan tugas tersebut,
-        aku memilih untuk datang ke rumah
-        kakaknya.
-
-    </p>
-
-    <p class="fade">
-
-        Dan bagian paling aneh dari semuanya
-        adalah...
-
-        aku datang ke sana tanpa mengetahui
-        bahwa dia mempunyai seorang adik.
-
-    </p>
-
-    <p class="fade">
-        Aku hanya datang untuk mengerjakan
-        tugas sekolah.
-    </p>
-
-    <p class="fade">
-
-        Tidak ada rencana.
-
-        Tidak ada niat untuk bertemu seseorang.
-
-        Tidak ada bayangan bahwa hari itu
-        akan menjadi awal dari sesuatu yang
-        akan bertahan selama bertahun-tahun.
-
-    </p>
-
-    <div class="emphasis fade">
-
-        Aku datang untuk mengerjakan tugas.
-
-        <br><br>
-
-        Tapi ternyata,
-
-        <br>
-
-        aku sedang berjalan menuju
-        sebuah pertemuan.
-
-    </div>
-
-</article>
-
-
-<section class="chapter fade" id="chapter5">
-
-    <div class="chapter-number">
-        CHAPTER 05
-    </div>
-
-    <h2>
-        She Knew Me First
-    </h2>
-
-    <div class="chapter-subtitle">
-        The meeting
-    </div>
-
-    <div class="divider"></div>
-
-</section>
-
-
-<article class="story">
-
-    <p class="drop fade">
-        Kemudian aku mengetahui keberadaannya.
-    </p>
-
-    <p class="fade">
-        Adiknya.
-    </p>
-
-    <p class="fade">
-
-        Wanita yang sebelumnya bahkan
-        tidak pernah kuketahui ada.
-
-    </p>
-
-    <p class="fade">
-
-        Dan ternyata...
-
-        bukan aku yang pertama kali
-        tertarik untuk mengenal.
-
-    </p>
-
-    <p class="fade">
-        Dia lebih dulu tertarik kepadaku.
-    </p>
-
-    <p class="fade">
-
-        Dia bertanya kepada kakaknya
-        tentang aku.
-
-    </p>
-
-    <p class="fade">
-
-        Bahkan dia meminta kakaknya
-        untuk mengenalkannya kepadaku.
-
-    </p>
-
-    <div class="emphasis fade">
-
-        Dua orang yang sebelumnya
-        bahkan tidak tahu satu sama lain...
-
-        <br><br>
-
-        akhirnya dipertemukan.
-
-    </div>
-
-</article>
-
-
-<section class="chapter fade" id="chapter6">
-
-    <div class="chapter-number">
-        CHAPTER 06
-    </div>
-
-    <h2>
-        What Are The Odds?
-    </h2>
-
-    <div class="chapter-subtitle">
-        Looking back
-    </div>
-
-    <div class="divider"></div>
-
-</section>
-
-
-<article class="story">
-
-    <p class="drop fade">
-
-        Kalau aku mencoba mengurai semuanya
-        sekarang, rasanya hampir seperti
-        melihat sebuah rantai kebetulan.
-
-    </p>
-
-    <p class="fade">
-        Aku bisa saja masuk ke sekolah lain.
-    </p>
-
-    <p class="fade">
-        Aku bisa saja tidak mengenal kakaknya.
-    </p>
-
-    <p class="fade">
-
-        Aku bisa saja tidak berada di kelas
-        yang sama dengannya.
-
-    </p>
-
-    <p class="fade">
-
-        Aku bisa saja tidak masuk ke
-        kelompok yang diberikan oleh guru.
-
-    </p>
-
-    <p class="fade">
-
-        Aku bisa saja memilih mengerjakan
-        tugas di rumahku sendiri.
-
-    </p>
-
-    <p class="fade">
-
-        Bahkan kalau hanya satu dari
-        keputusan-keputusan kecil itu
-        berubah...
-
-        mungkin seluruh cerita ini
-        tidak pernah terjadi.
-
-    </p>
-
-    <div class="big-number fade">
-        0.01%
-    </div>
-
-    <p class="fade">
-
-        Itulah mengapa aku menyebutnya
-        0.01%.
-
-        Bukan karena aku benar-benar bisa
-        menghitung peluangnya secara ilmiah.
-
-        Tapi karena ketika aku melihat
-        kembali semua jalan yang harus
-        kulewati untuk sampai kepadanya,
-        rasanya kemungkinan itu memang
-        sekecil itu.
-
-    </p>
-
-    <div class="emphasis fade">
-
-        Terlalu banyak hal yang
-        harus terjadi.
-
-        <br><br>
-
-        Dan semuanya terjadi.
-
-    </div>
-
-</article>
-
-
-<section class="end fade" id="epilogue">
-
-    <h2>
-        And That's How It Began.
-    </h2>
-
-    <p>
-
-        Sebuah cerita yang bermula dari
-        begitu banyak kebetulan.
-
-        <br><br>
-
-        Sebuah pertemuan yang seharusnya
-        hampir tidak pernah terjadi.
-
-        <br><br>
-
-        Dan seorang wanita yang,
-        tanpa kusadari saat itu,
-        akan menjadi bagian dari hidupku
-        selama bertahun-tahun.
-
-        <br><br>
-
-    </p>
-
-    <button
-        class="back"
-        onclick="backToCover()"
-    >
-        ↺ BACK TO COVER
-    </button>
-
-</section>
-
+    <nav class="nav">
+        <button onclick="backToCover()">↺ 0.01%</button>
+    </nav>
+
+    <header class="story-header fade">
+        <h2>0.01%</h2>
+        <div class="kicker">The Impossible Chance</div>
+        <div class="divider"></div>
+    </header>
+
+    <article class="story">
+        <p class="drop fade">
+            Aku bisa mengatakan bahwa bertemu dengannya hanya memiliki kemungkinan sebesar 0.01%.
+        </p>
+        <p class="fade">
+            Dari begitu banyak manusia di dunia, dari begitu banyak tempat yang bisa kudatangi, sekolah yang bisa kupilih, orang-orang yang mungkin bisa kukenal—ada terlalu banyak kemungkinan yang seharusnya membuat kami tidak pernah bertemu.
+        </p>
+        <p class="fade">Tapi pada akhirnya, aku tetap bertemu dengannya.</p>
+
+        <div class="emphasis fade">
+            Dan aku masih tidak tahu...<br>
+            apakah itu sebuah keberuntungan<br>
+            atau sebuah kesialan.
+        </div>
+
+        <p class="fade">
+            Di satu sisi, aku merasa sangat beruntung. Aku bertemu dengan seorang wanita yang sangat baik. Seseorang yang menyayangiku dan pernah hadir mengisi hariku.
+        </p>
+        <p class="fade">
+            Di sisi lain, aku merasa menjadi orang yang paling sial. Karena pada akhirnya, kami hanya sebatas pernah dekat, tanpa aku pernah benar-benar memilikinya.
+        </p>
+        <p class="fade">
+            Kalau ada yang bertanya bagaimana semua ini bisa terjadi, jawabannya sebenarnya cukup sederhana. Aku tidak mengenalnya secara langsung—aku lebih dulu mengenal kakaknya.
+        </p>
+        <p class="fade">
+            Kami sepantaran dan berada di angkatan yang sama di SMP yang sama. Dan tanpa kusadari saat itu, keputusan memilih sekolah tersebut adalah titik pertama yang membawa cerita ini kepadanya.
+        </p>
+
+        <div class="note fade">
+            Kalau aku masuk ke sekolah yang berbeda, kemungkinan besar aku tidak akan pernah mengenal kakaknya.<br><br>
+            Dan kalau aku tidak mengenal kakaknya, bagaimana mungkin aku bisa mengenal adiknya?
+        </div>
+
+        <p class="fade">
+            Kebetulan berikutnya, aku berada di kelas yang sama dengan kakaknya. Satu keputusan membawa kepada keputusan lainnya. Satu kebetulan membuka jalan menuju kebetulan berikutnya.
+        </p>
+        <p class="fade">
+            Hingga suatu hari, guru memberi kami tugas kelompok. Dari semua kemungkinan kombinasi nama, aku dimasukkan ke dalam kelompok yang sama dengan kakaknya.
+        </p>
+        <p class="fade">
+            Untuk mengerjakan tugas tersebut, aku memilih datang ke rumah kakaknya. Aku datang ke sana tanpa tahu sama sekali bahwa dia memiliki seorang adik. Tidak ada rencana, tidak ada niat untuk bertemu siapa pun.
+        </p>
+
+        <div class="emphasis fade">
+            Aku datang untuk mengerjakan tugas.<br><br>
+            Tapi ternyata, aku sedang berjalan menuju sebuah pertemuan.
+        </div>
+
+        <p class="fade">
+            Lalu aku mengetahui keberadaannya. Adiknya. Wanita yang sebelumnya bahkan tidak pernah kuketahui ada.
+        </p>
+        <p class="fade">
+            Dan ternyata, bukan aku yang pertama kali tertarik untuk mengenal. Dia lebih dulu tertarik kepadaku. Dia bertanya kepada kakaknya tentang aku, dan meminta kakaknya untuk mengenalkan kami.
+        </p>
+        <p class="fade">
+            Kami pun menjadi dekat. Aku tahu dia menyukaiku, dan dia pun tahu aku menyukainya. Sesuatu yang terasa begitu jelas tanpa perlu banyak kata.
+        </p>
+        <p class="fade">Namun di sanalah kebodohan dan penyesalan terbesarku bermula.</p>
+        <p class="fade">
+            Ada pikiran naif di kepalaku saat itu: bagaimana mungkin seorang wanita yang mengungkapkan perasaannya duluan? Bukankah terdengar aneh jika bukan pria yang memulainya?
+        </p>
+        <p class="fade">
+            Maka dia menunggu. Dia menunggu keberanianku untuk bersuara dan membawanya menuju kepastian. Tapi waktu tidak pernah menungguku.
+        </p>
+        <p class="fade">
+            Seorang temanku menyadari keberadaannya dan mulai mendekatinya. Bedanya, temanku tidak tertahan oleh ragu. Dia melangkah dan menyatakan perasaannya lebih dulu.
+        </p>
+        <p class="fade">Karena tak ada kepastian dariku, wanita itu akhirnya memilihnya dan pergi.</p>
+
+        <div class="note fade">
+            Andai saja hari itu aku jujur...<br><br>
+            Andai saja aku membuang gengsi dan berkata bahwa aku menyukainya serta ingin menjadikannya kekasihku...<br><br>
+            Mungkin rasa sakit ini tak akan menancap sedalam ini.
+        </div>
+
+        <p class="fade">
+            Yang membuat luka ini begitu beracun dan bertahan hingga 9 tahun lamanya bukanlah sekadar karena dia pergi. Tapi karena dialah cinta pertamaku yang gagal, dan kegagalan itu terjadi murni karena kebodohanku sendiri.
+        </p>
+        <p class="fade">
+            Aku menyebutnya 0.01% karena kemungkinan untuk bertemu dengannya sangatlah rumit dan takkan terulang kembali.
+        </p>
+
+        <div class="big-number fade">99.99%</div>
+
+        <p class="fade">
+            Namun sialnya, 99.99% jauh lebih besar ketimbang 0.01%. Maka dari itu, aku dan dia tidak akan pernah bersatu.
+        </p>
+
+        <div class="emphasis fade">
+            Terlalu banyak hal yang harus terjadi untuk bertemu.<br><br>
+            Namun satu keraguan saja cukup untuk memisahkan.
+        </div>
+    </article>
+
+    <section class="end fade" id="epilogue">
+        <h2>And That's How It Ended.</h2>
+        <p>
+            Satu keputusan pasif membawaku pada penyesalan bertahun-tahun, sampai semua rasa itu mengerucut pada satu nama: Dia.<br><br>
+            Sebuah rangkaian kebetulan yang begitu rumit untuk mempertemukan kami, hanya untuk dihancurkan oleh satu gengsi dan penyesalan sederhana.<br><br>
+        </p>
+        <button class="back" onclick="backToCover()">↺ BACK TO COVER</button>
+    </section>
 </main>
 
-
-<div class="contents" id="contents">
-
-    <div
-        class="contents-bg"
-        onclick="closeContents()"
-    ></div>
-
-    <div class="panel">
-
-        <button
-            class="close"
-            onclick="closeContents()"
-        >
-            ×
-        </button>
-
-        <h3>
-            Contents
-        </h3>
-
-        <button onclick="goTo('prolog')">
-            PROLOG
-            <br>
-            0.01%
-        </button>
-
-        <button onclick="goTo('chapter1')">
-            CHAPTER 01
-            <br>
-            Before I Knew Her
-        </button>
-
-        <button onclick="goTo('chapter2')">
-            CHAPTER 02
-            <br>
-            One Class
-        </button>
-
-        <button onclick="goTo('chapter3')">
-            CHAPTER 03
-            <br>
-            The Group
-        </button>
-
-        <button onclick="goTo('chapter4')">
-            CHAPTER 04
-            <br>
-            The House
-        </button>
-
-        <button onclick="goTo('chapter5')">
-            CHAPTER 05
-            <br>
-            She Knew Me First
-        </button>
-
-        <button onclick="goTo('chapter6')">
-            CHAPTER 06
-            <br>
-            What Are The Odds?
-        </button>
-
-    </div>
-
-</div>
-
-
 <script src="script.js"></script>
-
 </body>
 </html>
